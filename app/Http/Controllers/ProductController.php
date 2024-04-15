@@ -30,7 +30,7 @@ class ProductController extends Controller
 
         Product::create($request->all());
 
-        return redirect('/')->with('success', 'Produto criado com sucesso!');
+        return redirect('/index')->with('success', 'Produto criado com sucesso!');
     }
 
     // Exibir formulário para editar um produto
@@ -50,7 +50,7 @@ class ProductController extends Controller
 
         $product->update($request->all());
 
-        return redirect('/')->with('success', 'Produto atualizado com sucesso!');
+        return redirect('/index')->with('success', 'Produto atualizado com sucesso!'); // BOTEI INDEX NO /
     }
 
     // Deletar um produto
