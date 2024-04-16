@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <form action="{{route('search')}}" method="GET" class="mb-3" >
                     <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Buscar por nome de produto :">
+                        <input type="text" name="q" class="form-control " placeholder="Buscar por nome de produto:">
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </div>
                 </form>

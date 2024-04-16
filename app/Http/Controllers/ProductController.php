@@ -58,7 +58,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect('/')->with('success', 'Produto excluído com sucesso!');
+        return redirect('/index')->with('success', 'Produto excluído com sucesso!');
     }
 
     // Buscar por um nome de produto
