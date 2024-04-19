@@ -16,6 +16,8 @@
             <div class="col-md-12">
                 <h1>Lista de Produtos</h1>
                 <a href="{{ url('/create') }}" class="btn btn-primary mb-3">Criar Produto</a>
+                <a href="{{route('filterAvailable')}}" method="GET" class="btn btn-primary mb-3">Disponíveis</a>
+                <a href="{{route('orderAsc')}}" method="GET" class="btn btn-primary mb-3">Ordenar</a>
                 @if($products->isEmpty())
                     <p>Não há produtos cadastrados.</p>
                 @else

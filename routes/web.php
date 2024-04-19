@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
-
-
+use App\Models\Product;
 
 Route::get('/index', [ProductController::class, 'index']);// LISTAR PRODUTOS
 Route::get('/create', [ProductController::class, 'create']);// EXIBIR FORM CRIA PRODUTO
@@ -14,8 +13,9 @@ Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name
 Route::put('/{product}/edit', [ProductController::class, 'update'])->name('update');// ATUALIZAR PRODUTO
 Route::delete('/{product}', [ProductController::class, 'destroy'])->name('destroy');// DELETAR PRODUTO
 Route::get('/search', [ProductController::class, 'search'])->name('search'); // PROCURAR PRODUTO POR NOME
+Route::get('/filterAvailable', [ProductController::class, 'filterAvailable'])->name('filterAvailable');
 Route::get('/', [HomeController::class, 'menu']); // MENU DE LISTAS
-
+Route::get('/orderAsc', [ProductController::class, 'orderAsc'])->name('orderAsc');
 
 /*
 |--------------------------------------------------------------------------

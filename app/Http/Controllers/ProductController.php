@@ -68,4 +68,18 @@ class ProductController extends Controller
 
         return view('index', compact('products'));
     }
+
+    // Filtrar para apenas produtos disponíveis
+    public function filterAvailable(){
+        $products = Product::where('available', true)->get();
+        return view('index', compact('products'));
+    }
+
+    // Ordenar de menor para maior preço
+    public function orderAsc(){
+        $products = Product::where('available', true)
+                            ->orderBy('price', 'asc')
+                            ->get();
+        return view('index', compact('products'));
+    }
 }
